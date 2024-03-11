@@ -1,0 +1,113 @@
+@import "_normalize";
+@import "_variables";
+@import "_font";
+
+html {
+    background-color: $bg-main-color;
+}
+
+p,
+a {
+    letter-spacing: 0.2px;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+}
+
+.app {
+    margin: 180px auto 0;
+    max-width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid $border-color;
+    border-radius: $input-border-radius;
+    padding: 13px 12px;
+    font-size: 15px;
+    font-family: inherit;
+    line-height: 20px;
+    color: $social-text-color;
+    width: 100%;
+
+    &::placeholder {
+        color: $placeholder-text-color;
+    }
+}
+
+.password-wrapper {
+    position: relative;
+
+    .password-switcher {
+        background-image: url(../assets/icon-password-show.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+    }
+}
+
+.title {
+    color: $title-text-color;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0.6px;
+}
+
+.button {
+    border-radius: $button-border-radius;
+    border: 1px solid $border-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 12px 0;
+
+    &.primary {
+        border-color: $primary-text-color;
+        background-color: $primary-text-color;
+        color: $bg-main-color;
+    }
+
+    &[disabled] {
+        background-color: $placeholder-text-color;
+        border-color: $placeholder-text-color;
+        cursor: not-allowed;
+    }
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $social-text-color;
+    margin-bottom: 8px;
+}
+
+@media (max-width: $layout-breakpoint-s) {
+    .app {
+        padding: 0 20px;
+        margin-top: 30px;
+        min-width: 300px;
+    }
+
+    .title {
+        margin-top: 40px;
+    }
+}

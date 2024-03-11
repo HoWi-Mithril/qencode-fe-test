@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    margin-top: 40px;
+
+    .link {
+        border: 1px solid $border-color;
+        border-radius: $input-border-radius;
+        color: $social-text-color;
+        display: flex;
+        justify-content: center;
+        padding: 13px 0;
+
+        img {
+            height: 18px;
+            width: 18px;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-s) {
+    .social-links{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
+        grid-row-gap: 20px;
+    }
+}

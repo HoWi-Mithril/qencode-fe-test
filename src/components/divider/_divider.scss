@@ -1,0 +1,28 @@
+@import "src/styles/_variables";
+
+.divider {
+    align-items: center;
+    color: $divider-text-color;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    gap: 5px;
+    line-height: 16px;
+    margin-top: 30px;
+    text-align: center;
+
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        border-bottom: 1px solid $divider-border-color;
+        width: 50%;
+    }
+}
+
+@media (max-width: $layout-breakpoint-s) {
+    .divider {
+        margin-top: 20px;
+    }
+}

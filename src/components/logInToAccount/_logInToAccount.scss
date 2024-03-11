@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+
+.login-block {
+    .form {
+        margin-top: 30px;
+
+        .show-password {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+
+            .forgot-password {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: $primary-text-color;
+                text-align: right;
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+
+        .button {
+            margin-top: 30px;
+        }
+    }
+
+    .sign-up {
+        margin-top: 20px;
+        color: $title-text-color;
+        text-align: center;
+
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+
+        .sign-up-link {
+            font-weight: 500;
+            color: $primary-text-color;
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-s) {
+    .login-block {
+        .form {
+            margin-top: 20px;
+
+            .button {
+                margin-top: 20px;
+            }
+        }
+    }
+}

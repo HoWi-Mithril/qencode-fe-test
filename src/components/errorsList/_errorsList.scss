@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.error-list {
+    color: $error-color;
+    font-size: 12px;
+    margin-top: 12px;
+
+    li {
+        margin-top: 5px;
+    }
+}
